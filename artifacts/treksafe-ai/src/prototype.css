@@ -1,0 +1,106 @@
+.telemetry-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:-2px 0 13px}
+.telemetry-item{min-width:0;display:flex;align-items:flex-start;gap:9px;padding:11px 10px;border:1px solid rgba(153,181,199,.09);border-radius:9px;background:rgba(17,29,39,.62)}
+.telemetry-icon{width:25px;height:25px;flex:0 0 25px;display:grid;place-items:center;border-radius:7px;background:rgba(63,143,154,.1);color:#74b7c0}
+.telemetry-item>div{min-width:0;display:flex;flex-direction:column;gap:3px}
+.telemetry-label{font:500 7px 'DM Mono',monospace;color:#738a99;letter-spacing:.08em}
+.telemetry-item strong{font-size:9px;color:#bccbd3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.telemetry-item small{font-size:8px;color:#6e818e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.wildlife-demo-card{border-color:rgba(185,147,81,.16);background:linear-gradient(115deg,rgba(28,31,34,.96),rgba(20,28,35,.94))}
+.wildlife-demo-active{border-color:rgba(208,144,78,.28)}
+.wildlife-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0 13px}
+.wildlife-facts>div{display:flex;flex-direction:column;gap:6px;padding:10px;border:1px solid rgba(179,163,124,.11);border-radius:8px;background:rgba(255,255,255,.02)}
+.wildlife-facts span{font-size:8px;color:#81909a}
+.wildlife-facts strong{font:500 10px 'DM Mono',monospace;color:#d2d9dc}
+.wildlife-facts strong small{font:8px 'Inter',sans-serif;color:#71838e}
+.wildlife-facts .high-risk{color:#e99779}
+.wildlife-advice{display:flex;align-items:flex-start;gap:8px;padding:10px;border-radius:7px;border:1px solid rgba(198,149,76,.16);background:rgba(165,118,50,.075);color:#d7b777}
+.wildlife-advice>span{display:flex;flex-direction:column;gap:3px;font-size:9px;color:#b7a98d}
+.wildlife-advice strong{font-size:9px;color:#e0c787}
+.wildlife-disclaimer{margin:11px 0 0;color:#81909a;font-size:8px;line-height:1.6}
+.vibration-demo{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(115,146,177,.15);border-radius:9px;background:rgba(44,79,106,.07)}
+.vibration-icon{width:29px;height:29px;flex:0 0 29px;display:grid;place-items:center;border-radius:7px;color:#8daed2;background:rgba(73,111,152,.14)}
+.vibration-demo>div{min-width:0;display:flex;flex:1;flex-direction:column;gap:4px}
+.vibration-demo .eyebrow{font-size:7px}
+.vibration-demo strong{display:flex;align-items:center;gap:9px;font-size:9px;color:#bdcbd5}
+.vibration-demo strong i{font:500 7px 'DM Mono',monospace;color:#d5b977;font-style:normal}
+.vibration-demo small{font-size:8px;color:#778a98}
+
+.analytics-section{margin-top:24px}
+.analytics-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:12px}
+.analytics-section-head h2{margin:7px 0 4px;font-size:16px;letter-spacing:-.025em;color:#dce7ed}
+.analytics-section-head p{margin:0;color:#8294a1;font-size:9px;line-height:1.5}
+.analytics-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-bottom:10px}
+.analytics-metrics .metric-card{min-height:92px;padding:12px}
+.analytics-metrics .metric-value{font-size:18px;margin:9px 0 3px}
+.analytics-metrics .metric-foot{font-size:8px}
+.analytics-bottom{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:10px}
+.risk-distribution-card,.dataset-card{padding:17px}
+.risk-stack{display:flex;overflow:hidden;height:13px;margin:25px 0 14px;border-radius:7px;background:rgba(143,164,177,.1)}
+.risk-stack span{height:100%;min-width:0;transition:width .28s ease}
+.risk-stack .risk-safe{background:#50c694}.risk-stack .risk-caution{background:#e6b965}.risk-stack .risk-danger{background:#ee756b}
+.risk-legend{display:flex;flex-wrap:wrap;gap:15px}
+.risk-legend span{display:flex;align-items:center;gap:6px;color:#8799a4;font:500 8px 'DM Mono',monospace}
+.risk-legend i{width:7px;height:7px;border-radius:50%;background:#50c694}
+.risk-legend span:nth-child(2) i{background:#e6b965}.risk-legend span:nth-child(3) i{background:#ee756b}
+.risk-legend b{color:#c4d0d6;font-weight:500}
+.dataset-card h3{margin:7px 0 14px}
+.dataset-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.dataset-stats>div{display:flex;flex-direction:column;gap:3px;padding:9px;border:1px solid rgba(151,180,199,.09);border-radius:7px;background:rgba(255,255,255,.018)}
+.dataset-stats strong{font:500 13px 'DM Mono',monospace;color:#bbdbe0}
+.dataset-stats span{font-size:8px;color:#7a8d99}
+.dataset-card>p{margin:11px 0 0;font-size:8px;line-height:1.55;color:#788b96}
+
+.device-sensor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.device-sensor-item{display:flex;align-items:center;gap:9px;min-width:0;padding:10px;border:1px solid rgba(153,181,199,.09);border-radius:8px;background:rgba(255,255,255,.018)}
+.device-sensor-item>span{width:28px;height:28px;display:grid;place-items:center;flex:0 0 28px;border-radius:7px;background:rgba(60,139,151,.1);color:#79b9c1}
+.device-sensor-item>div{min-width:0;display:flex;flex:1;flex-direction:column;gap:4px}
+.device-sensor-item strong{font-size:9px;color:#b7c7cf}
+.device-sensor-item small{font-size:7px;line-height:1.4;color:#788b98}
+.device-sensor-item>b{font:500 7px 'DM Mono',monospace;color:#81c9ae;text-align:right}
+.sensor-status-card{margin-bottom:13px}
+.history-table-head,.history-table-row{grid-template-columns:1.6fr .9fr .55fr .62fr .62fr 1fr .65fr;gap:9px}
+.history-table-row>span{min-width:0}
+.trip-alert-counts{font:8px 'DM Mono',monospace;color:#9ab1bc;white-space:nowrap}
+.history-disclaimer{display:flex;align-items:center;gap:7px;margin-top:12px;padding-top:10px;border-top:1px solid rgba(149,177,195,.08);font-size:8px;line-height:1.5;color:#788a95}
+.history-disclaimer svg{flex:0 0 auto;color:#77a9b0}
+.map-area-label{position:absolute;z-index:3;padding:5px 7px;border:1px solid rgba(154,184,194,.14);border-radius:5px;background:rgba(12,22,29,.88);font:500 7px 'DM Mono',monospace;letter-spacing:.055em;color:#a6bac1}
+.route-area-label{left:27%;top:57%;color:#7acbd0;border-color:rgba(87,182,193,.2)}
+.wildlife-area-label{left:46%;top:27%;color:#e0bd7b;border-color:rgba(193,151,74,.24);background:rgba(42,32,20,.84)}
+.danger-area-label{right:9%;top:53%;color:#e99a91;border-color:rgba(207,98,87,.25);background:rgba(45,25,24,.88)}
+
+@media(max-width:850px){
+ .analytics-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .analytics-bottom{grid-template-columns:1fr}
+ .device-sensor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .history-table-head{display:none}
+ .history-table-row{grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;padding:11px 4px}
+ .history-table-row>span:nth-child(2){display:none}
+ .history-table-row>span:nth-child(1){grid-column:1;grid-row:1}
+ .history-table-row>span:nth-child(3){grid-column:2;grid-row:1;justify-self:end}
+ .history-table-row>span:nth-child(4){grid-column:2;grid-row:2;justify-self:end}
+ .history-table-row>span:nth-child(5){grid-column:1;grid-row:2;padding-left:38px}
+ .history-table-row>span:nth-child(6){grid-column:1;grid-row:3;padding-left:38px}
+ .history-table-row>span:nth-child(7){grid-column:2;grid-row:3;justify-self:end}
+}
+@media(max-width:700px){
+ .telemetry-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ .telemetry-item{padding:9px 7px;gap:6px}
+ .telemetry-item strong{font-size:8px}
+ .telemetry-item small{font-size:7px}
+ .wildlife-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .vibration-demo{align-items:flex-start;flex-wrap:wrap}
+ .vibration-demo .button{margin-left:39px}
+ .analytics-section-head{align-items:flex-start;flex-direction:column}
+ .analytics-section-head h2{font-size:14px}
+ .analytics-metrics{gap:7px}
+ .analytics-metrics .metric-card{padding:10px}
+ .analytics-metrics .metric-top .eyebrow{font-size:6px}
+ .device-sensor-grid{grid-template-columns:1fr}
+ .device-sensor-item>b{max-width:112px}
+ .route-area-label{left:20%;top:61%}
+ .wildlife-area-label{left:38%;top:24%}
+ .danger-area-label{right:5%;top:48%}
+ .risk-legend{gap:9px}
+ .history-disclaimer{align-items:flex-start}
+}

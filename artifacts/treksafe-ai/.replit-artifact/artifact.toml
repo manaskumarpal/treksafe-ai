@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "TrekSafe AI"
+description = "A responsive trekking-safety software prototype for exploring simulated smart-glasses sensor inputs, machine-learning risk predictions, alerts, trail conditions, trip history, and analytics."
+version = "1.0.0"
+id = "artifacts/treksafe-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20948
+
+[services.development]
+run = "pnpm --filter @workspace/treksafe-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/treksafe-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/treksafe-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20948"
+BASE_PATH = "/"
