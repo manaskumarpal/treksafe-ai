@@ -1,53 +1,178 @@
-# TrekSafe AI
+# TrekSafe Smart Glasses 🥽🏔️
 
-**AI-Powered Smart Trekking Safety System — software prototype**
+## ML-Based AI Trekking Safety System
 
-TrekSafe AI is a machine-learning trekking-safety assistant prototype. It explores how smart glasses, environmental sensors, and a safety classifier could help trekkers identify potentially risky conditions. The current app uses generated sensor readings and a synthetic training dataset to classify scenarios as **SAFE**, **CAUTION**, or **DANGER**.
+TrekSafe Smart Glasses is an AI-powered trekking safety concept that combines smart glasses, environmental sensors, infrared/thermal sensing, computer vision and Machine Learning to provide real-time safety information to trekkers.
 
-> TrekSafe AI is a Machine Learning based trekking safety assistant that explores how smart glasses, environmental sensors and intelligent safety prediction can help trekkers identify potentially dangerous situations. This software prototype simulates sensor inputs and uses machine learning to classify trekking conditions into Safe, Caution and Danger. A future hardware version could integrate thermal/infrared sensing, cameras, proximity sensors and vibration feedback through smart glasses.
+The glasses are designed to collect information from the surrounding environment and send the detected information to a connected mobile application, where the trekker can monitor hazards, environmental conditions and the overall safety status of the trail.
 
-## Prototype features
+---
 
-- Responsive dashboard for current demo safety status and simulated trail conditions
-- Scenario controls for wildlife, clear trail, obstacle, steep terrain, and low visibility
-- In-browser Random Forest prediction from nine generated sensor features
-- Simulated alert and vibration feedback
-- Simulated smart-glasses connection and sensor status
-- Demo trail visualization and simulated coordinates
-- Three illustrative demo trips plus trip history saved in the current browser's local storage
-- Safety analytics and a planned hardware architecture overview
+## 🎯 Problem
 
-## Run locally
+During trekking, dangerous situations can occur because of:
 
-From the project workspace:
+- Poor visibility
+- Hidden obstacles
+- Difficult terrain
+- Nearby animals
+- Sudden environmental changes
+- Unknown objects in the trekking path
+- Limited awareness of the surroundings
 
-```sh
-pnpm --filter @workspace/treksafe-ai run dev
-```
+A trekker may not always be able to identify these situations immediately.
 
-The app is part of a pnpm workspace. Install dependencies from the workspace root with `pnpm install` if needed.
+TrekSafe aims to provide an additional layer of environmental awareness through smart glasses and AI-based analysis.
 
-## ML proof of concept
+---
 
-The prediction module generates a deterministic dataset of 720 synthetic examples from plausible relationships among object distance and category, terrain and slope, visibility, temperature, animal proximity, obstacle density, and environmental conditions. A small Random Forest of 13 bootstrapped decision trees is trained in the browser from this dataset and predicts the class by majority vote. The displayed confidence is the share of trees voting for the selected class.
+# 🥽 Smart Glasses System
 
-This is a transparent demonstration of a classification workflow, not a validated or field-tested model. The data is synthetic, the risk rules are illustrative, and the confidence score is not a calibrated probability. Do not use the output for real trek planning or emergency decisions.
+The proposed TrekSafe glasses combine multiple sensing technologies.
 
-## Technical honesty and future hardware
+### 📷 Camera
 
-This software proof of concept does **not** contain or access infrared/thermal imaging, smart-glasses hardware, wildlife sensors, or real-time animal detection. The app's device status, sensor readings, detections, location, trail, alerts, and vibration feedback are simulations labelled as demo data. A phone camera is not represented as a thermal sensor.
+The camera can continuously observe the surroundings and provide visual information for computer vision models.
 
-Planned architecture:
+It can be used to detect:
+
+- Animals
+- Obstacles
+- Objects
+- Trail conditions
+- Other potential hazards
+
+---
+
+### 🌡️ Infrared / Thermal Sensing
+
+Infrared or thermal sensing can help identify heat signatures in the surrounding environment.
+
+This can be especially useful in:
+
+- Low-light environments
+- Night trekking
+- Poor visibility
+- Detecting nearby warm objects or animals
+
+The thermal information can be processed along with camera and environmental data to improve hazard awareness.
+
+---
+
+### 🎙️ Sound Detection
+
+Microphones can monitor environmental sounds and identify unusual acoustic events.
+
+Examples include:
+
+- Animal sounds
+- Sudden environmental sounds
+- Nearby movement
+- Other potentially important audio signals
+
+---
+
+### 📳 Vibration & Motion Sensors
+
+Motion and vibration sensors can provide information about movement and sudden changes around the user.
+
+Possible applications include:
+
+- Sudden movement detection
+- Impact detection
+- Motion analysis
+- Environmental vibration monitoring
+
+---
+
+# 📱 Connected Mobile Application
+
+The smart glasses can communicate detected information to a connected mobile application.
+
+The application acts as the main monitoring interface for the trekker.
+
+The app can display:
+
+- 🐾 Animal detection
+- ⚠️ Hazard alerts
+- 🌡️ Environmental information
+- 📷 Camera detection
+- 🗺️ Trail information
+- 📊 Safety score
+- 📡 Sensor information
+- 🚨 Safety status
+- 🥾 Trip information
+
+The mobile application provides the trekker with a simple real-time overview of the surrounding environment.
+
+---
+
+# 🤖 Machine Learning Safety Prediction
+
+TrekSafe uses Machine Learning to analyze environmental and sensor information and estimate the current safety condition.
+
+The system can consider features such as:
+
+- Object distance
+- Detected object type
+- Animal proximity
+- Terrain type
+- Terrain slope
+- Visibility
+- Temperature
+- Environmental conditions
+- Obstacle density
+- Sensor readings
+
+The ML system can classify the environment into three safety levels:
+
+### 🟢 SAFE
+
+No significant hazard detected.
+
+### 🟡 CAUTION
+
+Potential hazard detected and the trekker should remain alert.
+
+### 🔴 DANGER
+
+A significant potential hazard has been detected and the system should generate an alert.
+
+---
+
+# 🔄 System Architecture
 
 ```text
-Smart glasses
-  → camera + future thermal/infrared + environmental/proximity/motion sensors
-  → edge processing / microcontroller
-  → wireless communication
-  → mobile application
-  → machine-learning safety analysis
-  → user alert
-  → future vibration feedback through glasses
-```
-
-Real hardware integration would require suitable sensors, communications, on-device or server-side processing, field validation, and safety testing. The current prototype provides none of those guarantees.
+              TREKSAFE SMART GLASSES
+                       │
+        ┌──────────────┼──────────────┐
+        │              │              │
+     Camera       IR/Thermal      Sensors
+        │              │              │
+        └──────────────┼──────────────┘
+                       │
+                Environmental Data
+                       │
+                       ▼
+              Mobile Application
+                       │
+                       ▼
+              Machine Learning
+                Safety Analysis
+                       │
+                       ▼
+             ┌──────────────────┐
+             │  Safety Status   │
+             ├──────────────────┤
+             │ 🟢 SAFE          │
+             │ 🟡 CAUTION       │
+             │ 🔴 DANGER        │
+             └──────────────────┘
+                       │
+                       ▼
+                 Alert System
+                       │
+             ┌─────────┴─────────┐
+             ▼                   ▼
+        Mobile Alert       Future Haptic
+                           Glasses Alert
